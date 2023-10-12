@@ -13,7 +13,7 @@ int main(void)
 {
     int x;
     printf("main x is at %p\n", &x);
-      func1();
+    func1();
 
     return 0;
 }
