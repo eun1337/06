@@ -2,27 +2,33 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-/*
-void square( int a )
+
+int combimation(int n, int r)
 {
-	a = a*a;
+	int i;
+	int deno=1, nu=1; // denominator 분모 numerator 분자 
+	
+	for(i = 1; i <= n; i++) {
+		 nu*= i;
+	}
+	
+	for(i = 1; i <= n-r ; i++) {
+		deno*= i;
+	}
+	
+	for(i = 1; i <= r; i++) {
+		deno*= i;
+	}
+	
+	return nu/deno; 
+	
 }
 
-int main()
+int main(void)
 {
-	int a = 2;
-	square(a);
-	printf("a=%i\n", a);
-}
-*/
-int square( int a )
-{
-	return (a*a);
-}
-
-int main()
-{
-	int a = 2;
-	a = square(a);
-	printf("a=%i\n", a);
+	int n, r;
+	scanf("%d %d", &n, &r);
+	printf("C(n,r) = %d\n", combimation(n, r));
+	
+	return 0;
 }
